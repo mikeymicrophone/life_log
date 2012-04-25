@@ -1,4 +1,7 @@
 LifeLog::Application.routes.draw do
+  resources :exercises
+  
+  root :to => 'exercises#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
