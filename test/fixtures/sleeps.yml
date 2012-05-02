@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_time: 2012-05-01 20:50:11
+  wake_time: 2012-05-01 20:50:11
+  note: MyText
+
+two:
+  start_time: 2012-05-01 20:50:11
+  wake_time: 2012-05-01 20:50:11
+  note: MyText

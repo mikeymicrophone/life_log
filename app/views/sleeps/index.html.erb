@@ -1,0 +1,31 @@
+<h1>Sleep data</h1>
+
+<table>
+  <tr>
+	<% if params[:order] == 'ascending' %>
+	  <th><%= link_to 'Start time', sleeps_path(:order => 'descending') %></th>
+	<% else %>
+	  <th><%= link_to 'Start time', sleeps_path(:order => 'ascending') %></th>
+	<% end %>
+    <th>Wake time</th>
+    <th><%= link_to 'Note', sleeps_path(:note => true) %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sleeps.each do |sleep| %>
+  <tr>
+    <td><%= sleep.start_time.strftime("%A, %m/%d %I:%M %p") %></td>
+    <td><%= sleep.wake_time.strftime("%A, %m/%d %I:%M %p") %></td>
+    <td><%= link_to sleep.note, sleep %></td>
+    <td><%= link_to 'permalink', sleep %></td>
+    <td><%= link_to 'e', edit_sleep_path(sleep) %></td>
+    <td><%= link_to 'x', sleep, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sleep', new_sleep_path %>

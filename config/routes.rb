@@ -1,4 +1,6 @@
 LifeLog::Application.routes.draw do
+  resources :sleeps
+
   resources :exercises
   
   root :to => 'exercises#new'

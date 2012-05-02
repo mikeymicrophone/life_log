@@ -1,5 +1,5 @@
 <%= form_for @exercise do |f| %>
   <%= f.text_field :name %><br>
-  <%= f.text_area :instructions, :size => '40x4', :placeholder => "Generic instructions are preferred." %><br>
+  <%= f.text_area :instructions, {:size => '40x4', :placeholder => "Generic instructions are preferred."} %><br>
   <%= f.submit "Load it up please" %>
 <% end %>

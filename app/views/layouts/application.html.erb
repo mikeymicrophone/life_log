@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav>
+  <%= link_to 'sleep data', sleeps_path %>
+  <%= link_to 'exercise data', exercises_path %>
+</nav>
 <%= yield %>
-
+<nav id="footer">
+	Life log is an app created in the 3rd Ward Ruby class.  It allows you to log life events such as exercise, sleep, and food.
+</nav>
 </body>
 </html>

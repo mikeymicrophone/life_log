@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start time:</b>
+  <%= @sleep.start_time.strftime("%A, %m/%d %I:%M %p") %>
+</p>
+
+<p>
+  <b>Wake time:</b>
+  <%= @sleep.wake_time.strftime("%A, %m/%d %I:%M %p") %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @sleep.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_sleep_path(@sleep) %> |
+<%= link_to 'Back', sleeps_path %>
